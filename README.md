@@ -10,7 +10,9 @@ NoMUR stands for Northern Mindanao Unstructured Roads. It is a self-gathered dat
 ## Dependencies
 
 Create a virtual environment and install dependencies by:
-`pip install requirements.txt`
+```
+pip install requirements.txt
+```
 
 
 
