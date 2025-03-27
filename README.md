@@ -17,11 +17,16 @@ pip install requirements.txt
 
 
 ## Data Augmentation
-This repository contains utility functions for processing the dataset. 
-You can perform data augmentation for segmentation task on NoMURLane and NoMURPanel datasets, where each annotation is a 4-point polygon.
+This repository contains utility functions for processing the dataset. You can perform data augmentation for segmentation task on NoMURLane and NoMURPanel datasets, where each annotation is a 4-point polygon.
 
 ```
-python augment.py --data config.yaml
+python augment.py --data config.yaml 
+```
+
+If you do not want to visualize augmentation per image, you can add argument `no-show`.
+
+```
+python augment.py --data config.yaml --no-show
 ```
 
 Modify the `config.yaml` file to fill in appropriate parameters, such as `source_path`, `destination_path`, `img_size`, `id2class`, and `outputs_per_img`.
