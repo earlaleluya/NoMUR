@@ -12,5 +12,6 @@ pytz==2025.2
 PyYAML==6.0.2
 setuptools==75.8.0
 six==1.17.0
+tqdm==4.67.1
 tzdata==2025.2
 wheel==0.45.1

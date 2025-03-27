@@ -2,7 +2,8 @@
 This program performs data augmentation for segmentation task where each annotation is a 4-point polygon.
 
 Usage:
-    python augment.py --data config.yaml
+    python augment.py --data config.yaml --no-show
+    python augment.py --data config.yaml --show
 """
 
 
@@ -13,6 +14,7 @@ import numpy as np
 import argparse
 from pathlib import Path 
 import yaml 
+from tqdm import tqdm
 
 
 
@@ -546,7 +548,8 @@ def save(new_img, new_labels, img_num, img_path, lbl_path, args):
     lbl_fname = lbl_path.name.split('.')[0] + f'_{img_num:0{4}d}.TXT'
     cv2.imwrite(out_img_path / img_fname, new_img)
     new_labels.to_csv(out_lbl_path / lbl_fname, sep=" ", header=False, index=False, float_format="%.6f")
-    print(f"Saving {out_img_path / img_fname}")
+    if args.show: 
+        print(f"Saving {out_img_path / img_fname}")
     
 
 
@@ -647,33 +650,27 @@ def load_yaml(filepath):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="This program performs data augmentation for segmentation task where each annotation is a 4-point polygon.")
     parser.add_argument('--data', required=True, help="Path to the configuration file containing the details such as paths and augmentation parameters.")
+    parser.add_argument('--show', action='store_true', help="Whether to visualize augmentation.")
+    parser.add_argument('--no-show', action='store_false', dest='show', help="Don't visualize augmentation.")
+    parser.set_defaults(show=True)
     parser_args = parser.parse_args()
+
 
 
     yaml_data = load_yaml(parser_args.data) 
     if yaml_data:
-        args = argparse.Namespace(**yaml_data)
-        # args = argparse.Namespace(
-        #     yaml_data.get("source_dataset_path"),
-        #     destination_path = yaml_data.get("destination_dataset_path"),
-        #     img_size = yaml_data.get("img_size"),
-        #     id2class = yaml_data.get("id2class"),
-        #     classes = yaml_data.get("classes"),
-        #     outputs_per_img = yaml_data.get("outputs_per_img"),
-        #     flip = yaml_data.get("flip"),
-        #     rotation = yaml_data.get("rotation"),
-        #     grayscale_chance = yaml_data.get("grayscale_chance"),
-        #     hue = yaml_data.get("hue"),
-        #     saturation = yaml_data.get("saturation"),
-        #     brightness = yaml_data.get("brightness"),
-        #     show = yaml_data.get("show"),
-        # )
-
+        args = argparse.Namespace(**yaml_data, show=parser_args.show)
+    
 
     images_paths = get_images_paths_on_set_folders(args.source_path)
     labels_paths = get_labels_paths(images_paths)
 
+    
+    if not args.show:
+        progress_bar = tqdm(total=len(images_paths))
     for img_path, label_path in zip(images_paths, labels_paths):
         img, labels = load(img_path, label_path)
         img, labels = preprocess(img, labels, args)
         augment(img, labels, img_path, label_path, args)
+        if not args.show:
+            progress_bar.update(1)

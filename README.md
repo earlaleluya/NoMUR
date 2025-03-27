@@ -24,4 +24,4 @@ You can perform data augmentation for segmentation task on NoMURLane and NoMURPa
 python augment.py --data config.yaml
 ```
 
-Modify the `config.yaml` file to fill in appropriate parameters, such as `source_path`, `destination_path`, `img_size`, `id2class`, `outputs_per_img`, and `show`. 
+Modify the `config.yaml` file to fill in appropriate parameters, such as `source_path`, `destination_path`, `img_size`, `id2class`, and `outputs_per_img`.

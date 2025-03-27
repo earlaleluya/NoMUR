@@ -1,8 +1,8 @@
 # Source path of the original dataset.
-source_path: "path/to/your/source/path"
+source_path: "path/to/your/source/dataset"
 
 # Destination path for the augmented dataset.
-destination_path: "path/to/your/destination/path"
+source_path: "path/to/your/destination/dataset"
 
 # Image size (height, width) for resizing.
 img_size: [1088, 1920]  
@@ -33,6 +33,3 @@ saturation: [-50, 50]
 
 # Range of brightness adjustment percentages.
 brightness: [-50, 50]
-
-# Boolean flag to enable/disable visualization of annotations on frames.
-show: true
