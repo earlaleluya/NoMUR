@@ -14,9 +14,6 @@ import argparse
 from pathlib import Path 
 import yaml 
 
-# pip install PyYAML
-# pip install pip-tools
-# pip-compile requirements.in
 
 
 def load(img_path, label_path):
