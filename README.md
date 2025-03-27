@@ -1,6 +1,6 @@
 # NoMUR
 
-NoMUR stands for Northern Mindanao Unstructured Roads. It is self-gathered dataset containing NoMURLane, NoMURPanel, and NoMURDistress.
+NoMUR stands for Northern Mindanao Unstructured Roads. It is a self-gathered dataset containing NoMURLane, NoMURPanel, and NoMURDistress.
 
 - NoMURLane: **No**rthern **M**indanao **U**nstructured **R**oads – a four-point polygon-annotated, single-class dataset for Road **Lane** segmentation.
 - NoMURPanel: **No**rthern **M**indanao **U**nstructured **R**oads – a four-point polygon-annotated, single-class dataset for Pavement **Panel** segmentation.
@@ -17,5 +17,3 @@ python augment.py --data config.yaml
 ```
 
 Modify the `config.yaml` file to fill in appropriate parameters, such as source path and destination path. 
-
-
