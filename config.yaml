@@ -1,0 +1,13 @@
+source_path: "path/to/your/source/path"
+destination_path: "path/to/your/destination/path"
+img_size: [1088, 1920]  # (height, width)
+id2class: {0: "road_lane"}              
+classes: [0]
+outputs_per_img: 20
+flip: ['horizontal', 'vertical', null] 
+rotation: [-10, 10]
+grayscale_chance: 0.4
+hue: [-50, 50]
+saturation: [-50, 50]
+brightness: [-50, 50]
+show: true
