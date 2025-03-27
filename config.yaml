@@ -1,13 +1,38 @@
+# Source path of the original dataset.
 source_path: "path/to/your/source/path"
+
+# Destination path for the augmented dataset.
 destination_path: "path/to/your/destination/path"
-img_size: [1088, 1920]  # (height, width)
-id2class: {0: "road_lane"}              
+
+# Image size (height, width) for resizing.
+img_size: [1088, 1920]  
+
+# Mapping from class ID to class name.
+id2class: {0: "road_lane"}            
+
+# List of class IDs to annotate.
 classes: [0]
+
+# Number of augmented outputs to generate per original image.
 outputs_per_img: 20
-flip: ['horizontal', 'vertical', null] 
+
+# List of flip augmentation options (horizontal, vertical, or null for no flip).
+flip: ['horizontal', 'vertical', null]
+
+# Range of rotation angles (in degrees).
 rotation: [-10, 10]
+
+# Probability of applying grayscale augmentation.
 grayscale_chance: 0.4
+
+# Range of hue adjustment values (in degrees).
 hue: [-50, 50]
+
+# Range of saturation adjustment percentages.
 saturation: [-50, 50]
+
+# Range of brightness adjustment percentages.
 brightness: [-50, 50]
+
+# Boolean flag to enable/disable visualization of annotations on frames.
 show: true
