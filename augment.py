@@ -2,8 +2,9 @@
 This program performs data augmentation for segmentation task where each annotation is a 4-point polygon.
 
 Usage:
+    python augment.py --data config.yaml
     python augment.py --data config.yaml --no-show
-    python augment.py --data config.yaml --show
+
 """
 
 
