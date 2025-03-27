@@ -6,10 +6,16 @@ NoMUR stands for Northern Mindanao Unstructured Roads. It is a self-gathered dat
 - NoMURPanel: **No**rthern **M**indanao **U**nstructured **R**oads – a four-point polygon-annotated, single-class dataset for Pavement **Panel** segmentation.
 - NoMURDistress: **No**rthern **M**indanao **U**nstructured **R**oads – a multi-class dataset for Pavement Panel **Distress** classification.
 
-This repository contains utility functions for processing the dataset. 
+
+## Dependencies
+
+Create a virtual environment and install dependencies by:
+`pip install requirements.txt`
+
+
 
 ## Data Augmentation
-
+This repository contains utility functions for processing the dataset. 
 You can perform data augmentation for segmentation task on NoMURLane and NoMURPanel datasets, where each annotation is a 4-point polygon.
 
 ```
