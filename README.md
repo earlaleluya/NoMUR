@@ -7,6 +7,48 @@ NoMUR stands for Northern Mindanao Unstructured Roads. It is a self-gathered dat
 - NoMURDistress: **No**rthern **M**indanao **U**nstructured **R**oads – a multi-class dataset for Pavement Panel **Distress** classification.
 
 
+# Citations
+
+NoMURLane:
+```
+@data{NoMURLane,
+    author = {Aleluya, Earl Ryan and Maluya, Melody Mae and Miranda, Genesis and Barro, Shiela Mae and Clar, Steve and Alagon, Francis Jann and Aleluya, Edward Rowe and Opon, Joel and Salaan, Carl John},
+    publisher = {Harvard Dataverse},
+    title = {{NoMURLane}},
+    year = {2025},
+    version = {V1},
+    doi = {10.7910/DVN/BAMYR1},
+    url = {https://doi.org/10.7910/DVN/BAMYR1}
+}
+```
+
+NoMURPanel:
+```
+@data{NoMURPanel,
+    author = {Aleluya, Earl Ryan and Maluya, Melody Mae and Miranda, Genesis and Barro, Shiela Mae and Clar, Steve and Alagon, Francis Jann and Aleluya, Edward Rowe and Opon, Joel and Salaan, Carl John},
+    publisher = {Harvard Dataverse},
+    title = {{NoMURLane}},
+    year = {2025},
+    version = {V1},
+    doi = {10.7910/DVN/BAMYR1},
+    url = {https://doi.org/10.7910/DVN/BAMYR1}
+    }
+```
+
+NoMURDistress:
+```
+@data{NoMURDistress,
+    author = {Aleluya, Earl Ryan and Maluya, Melody Mae and Miranda, Genesis and Barro, Shiela Mae and Clar, Steve and Alagon, Francis Jann and Aleluya, Edward Rowe and Opon, Joel and Salaan, Carl John},
+    publisher = {Harvard Dataverse},
+    title = {{NoMURDistress}},
+    year = {2025},
+    version = {V1},
+    doi = {10.7910/DVN/HUEFOS},
+    url = {https://doi.org/10.7910/DVN/HUEFOS}
+    }
+```
+
+
 ## Dependencies
 
 Create a virtual environment and install dependencies by:
